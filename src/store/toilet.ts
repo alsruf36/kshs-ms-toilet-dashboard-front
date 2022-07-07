@@ -19,13 +19,13 @@ export const useToilet = defineStore("toilet", {
   actions: {
     async fetchToilets() {
       try{
-        await fetch("/api/toilets/list/")
+        await fetch("https://toilet.kshs.dev/api/toilets/list/")
           .then((response) => response.json())
           .then((data_list) => {
             console.debug(data_list)
             data_list['toilets'].forEach(async (toilet: number) => {
               try{
-                await fetch(`/api/toilets/?id=${toilet}`)
+                await fetch(`https://toilet.kshs.dev/api/toilets/?id=${toilet}`)
                   .then((response) => response.json())
                   .then((data) => {
                     console.debug(data)
