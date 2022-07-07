@@ -10,11 +10,11 @@ export const availableLocales: ILocales = {
   en: {
     name: "English",
     iso: "en-US",
-    flag: "i-twemoji-flag-us-outlying-islands",
+    flag: "english",
   },
   tr: {
-    name: "Turkce",
-    iso: "tr-TR",
-    flag: "i-twemoji-flag-turkey",
+    name: "Korean",
+    iso: "ko-KR",
+    flag: "korean",
   },
 };

@@ -36,9 +36,9 @@ export default defineNuxtConfig({
   intlify: {
     localeDir: "locales",
     vueI18n: {
-      locale: "en-US",
-      fallbackLocale: "en-US",
-      availableLocales: ["en-US", "tr-TR"],
+      locale: "ko-KR",
+      fallbackLocale: "ko-KR",
+      availableLocales: ["ko-KR", "en-US"],
       sync: true,
     },
   },
@@ -58,5 +58,14 @@ export default defineNuxtConfig({
   },
   vite: {
     logLevel: "info",
+    server: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:8088',
+                changeOrigin: true,
+                rewrite: path => path.replace(/^\/api/, '') 
+            }
+        }
+    },
   },
 });

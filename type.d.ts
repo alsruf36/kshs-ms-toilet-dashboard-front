@@ -1,6 +1,6 @@
 import { IntlifyModuleOptions } from "@intlify/nuxt3";
 
-import en from "./src/locales/en-US.json";
+import ko from "./src/locales/ko-KR.json";
 
 declare module "@nuxt/schema" {
   interface NuxtConfig {
@@ -8,7 +8,7 @@ declare module "@nuxt/schema" {
   }
 }
 
-type MessageSchema = typeof en;
+type MessageSchema = typeof ko;
 
 declare module "vue-i18n" {
   export interface DefineLocaleMessage extends MessageSchema {}
