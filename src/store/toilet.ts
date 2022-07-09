@@ -3,7 +3,8 @@ import { defineStore } from "pinia";
 interface Toilet {
   id: number;
   rotation: number;
-  flush: number;
+  flush: boolean;
+  flushTime: number;
 }
 
 export type ToiletState = {
@@ -37,6 +38,7 @@ export const useToilet = defineStore("toilet", {
                         id: toilet,
                         rotation: data['rotation'],
                         flush: data['flush'],
+                        flushTime: data['flushTime'],
                       });
                     }
 
@@ -45,6 +47,7 @@ export const useToilet = defineStore("toilet", {
                         id: toilet,
                         rotation: data['rotation'],
                         flush: data['flush'],
+                        flushTime: data['flushTime'],
                       });
                     }
                   });
